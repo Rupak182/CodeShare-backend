@@ -20,9 +20,7 @@ let URI =process.env.MONGOURI
 let PORT =process.env.PORT || 4000
 
 try {
-    await mongoose.connect(URI,
-    { useNewUrlParser: true, useUnifiedTopology: true }
-);
+    await mongoose.connect(URI);
     console.log("Connected to mongodb")
     
 } catch (error) {
